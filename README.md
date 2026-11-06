@@ -1,6 +1,6 @@
-# DPed-VLN Web
+# DPed-VLN Anonymous Project Page
 
-CVPR-style project page for DPed-VLN: a benchmark for socially compliant vision-and-language navigation in dynamic pedestrian environments.
+Double-blind project page for DPed-VLN. The page follows the Academic Project Page / Probex template and intentionally withholds author identities, affiliations, source-code links, dataset DOI, and preprint URL during review.
 
 ## Local preview
 
@@ -10,6 +10,6 @@ python -m http.server 8000
 
 Open http://localhost:8000.
 
-## GitHub Pages
+## Deployment
 
-The repository includes a GitHub Actions workflow in `.github/workflows/pages.yml`. Enable **Settings → Pages → Source: GitHub Actions** once, then push to `main`.
+The repository deploys automatically to GitHub Pages through `.github/workflows/pages.yml`.
