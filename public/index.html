@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="DPed-VLN: A Benchmark for Socially Compliant Vision-and-Language Navigation">
+  <meta name="description" content="DPed-VLN is an anonymous benchmark for vision-and-language navigation in dynamic pedestrian environments.">
+  <meta name="keywords" content="vision-and-language navigation, embodied AI, dynamic pedestrians, social navigation, Habitat 3.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Anonymous Authors">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DPed-VLN — Anonymous Project Page">
+  <meta property="og:description" content="A benchmark for socially compliant vision-and-language navigation in dynamic pedestrian environments.">
+  <meta property="og:image" content="static/images/overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>DPed-VLN — Anonymous Project Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent:#2563eb; --ink:#172033; }
+    body { font-family:Inter,system-ui,sans-serif; color:var(--ink); }
+    .publication-title { letter-spacing:-.035em; }
+    .hero.teaser img, .paper-figure img { display:block; width:100%; height:auto; border-radius:12px; box-shadow:0 14px 40px rgba(23,32,51,.12); }
+    .paper-figure { margin:1.5rem 0; }
+    .paper-figure figcaption { text-align:center; color:#667085; font-size:.95rem; margin-top:.75rem; }
+    .blind-note { display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border-radius:999px; background:#eff6ff; color:#1d4ed8; font-size:.9rem; font-weight:600; margin-top:1rem; }
+    .metric-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; margin-top:1.5rem; }
+    .metric { background:#fff; border:1px solid #e7eaf0; border-radius:14px; padding:1.1rem; text-align:center; }
+    .metric strong { display:block; font-size:1.55rem; color:#2563eb; }
+    .metric span { color:#667085; font-size:.8rem; }
+    .method-card { height:100%; border:1px solid #e7eaf0; border-radius:14px; padding:1.25rem; background:#fff; }
+    .method-card .num { color:#2563eb; font-weight:800; }
+    .status-box { border-left:4px solid #2563eb; background:#f5f8ff; padding:1rem 1.2rem; border-radius:0 10px 10px 0; }
+    .citation-box { position:relative; }
+    .citation-box pre { padding-top:3rem; }
+    @media (max-width:768px) { .metric-grid { grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <p class="is-size-6 has-text-weight-semibold has-text-link mb-4">ANONYMOUS SUBMISSION · DOUBLE-BLIND REVIEW</p>
+              <h1 class="title is-1 publication-title">DPed-VLN: A Benchmark for Socially Compliant Vision-and-Language Navigation in Dynamic Pedestrian Environments</h1>
+              <div class="is-size-5 publication-authors"><span class="author-block">Anonymous Authors</span></div>
+              <div class="is-size-5 publication-authors"><span class="author-block">Anonymous Institution</span></div>
+              <div class="blind-note"><i class="fas fa-eye-slash"></i> Author, affiliation, code, and dataset links are withheld during review.</div>
+              <div class="publication-links mt-5">
+                <span class="link-block"><a href="static/pdfs/paper.pdf" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Anonymous Paper</span></a></span>
+                <span class="link-block"><a href="static/pdfs/supplementary.pdf" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Supplementary</span></a></span>
+                <span class="link-block"><button class="button is-normal is-rounded is-light" disabled><span class="icon"><i class="fas fa-lock"></i></span><span>Code &amp; Data (Withheld)</span></button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/teaser.png" alt="DPed-VLN benchmark teaser" loading="eager">
+          <h2 class="subtitle has-text-centered mt-4">A paired benchmark for route following and pedestrian-aware navigation.</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered"><div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Vision-and-language navigation in human-populated spaces requires agents to ground language while responding to moving pedestrians and social-safety constraints. We present DPed-VLN, a Habitat 3.0 benchmark containing 33,093 navigation episodes with paired global and prior-augmented instructions. The benchmark combines ORCA-controlled humanoid pedestrians, socially constrained expert paths, and navigation-efficiency and pedestrian-safety metrics reported side by side. Global instructions provide ordinary route guidance, while prior-augmented instructions include dynamic-pedestrian cues for the same episodes. These conditions support comparisons of policy responses to the available language annotations. We provide DPet (Dynamic Pedestrian-aware Network) as a reference implementation trained with reinforcement learning or imitation learning. We also evaluate representative vision-and-language navigation policies under zero-shot and parameter-efficient adaptation settings.</p>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Benchmark at a glance</h2>
+        <div class="metric-grid">
+          <div class="metric"><strong>33,093</strong><span>navigation episodes</span></div>
+          <div class="metric"><strong>66,186</strong><span>paired instructions</span></div>
+          <div class="metric"><strong>2</strong><span>instruction levels</span></div>
+          <div class="metric"><strong>3.21</strong><span>visible pedestrians / scene</span></div>
+          <div class="metric"><strong>500</strong><span>maximum steps</span></div>
+        </div>
+        <figure class="paper-figure"><img src="static/images/overview.png" alt="DPed-VLN benchmark construction overview" loading="lazy"><figcaption>Benchmark construction, multi-sensor collection, quality assurance, and paired instruction generation.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Two language conditions</h2>
+        <div class="columns is-variable is-5 mt-4">
+          <div class="column"><div class="method-card"><span class="num">LEVEL 1</span><h3 class="title is-4 mt-2">Global instructions</h3><p>Route and destination guidance grounded in the static scene, without pedestrian-specific priors.</p></div></div>
+          <div class="column"><div class="method-card"><span class="num">LEVEL 2</span><h3 class="title is-4 mt-2">Prior-augmented instructions</h3><p>The same route guidance enriched with concise cues about pedestrian motion, risk, and crowd context.</p></div></div>
+        </div>
+        <div class="status-box mt-5"><strong>Blind-review note.</strong> The page intentionally omits author identities, institutional information, repository links, dataset DOI, and preprint URL.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Reference policy</h2>
+        <p class="has-text-centered mb-5">DPet grounds egocentric RGB-D observations, language, start-relative progress, and pedestrian-aware auxiliary objectives in a unified policy.</p>
+        <figure class="paper-figure"><img src="static/images/framework.png" alt="DPet reference framework" loading="lazy"><figcaption>Reference architecture for pedestrian-aware vision-and-language navigation.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results and qualitative evidence</h2>
+        <div class="columns is-variable is-5 mt-4">
+          <div class="column"><figure class="paper-figure"><img src="static/images/qualitative.png" alt="Qualitative navigation examples" loading="lazy"><figcaption>Qualitative navigation examples under dynamic pedestrian interactions.</figcaption></figure></div>
+          <div class="column is-flex is-align-items-center"><div class="content"><h3 class="title is-4">Progress and safety together</h3><p>We report success, path efficiency, completion time, collision behavior, and personal-space compliance side by side to expose the trade-offs hidden by goal-reaching metrics alone.</p><div class="tags"><span class="tag is-link is-light">SR</span><span class="tag is-link is-light">SPL</span><span class="tag is-link is-light">STL</span><span class="tag is-link is-light">PSC</span><span class="tag is-link is-light">HCR</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content citation-box">
+        <h2 class="title is-3">Citation</h2>
+        <div class="status-box"><i class="fas fa-lock mr-2"></i>Bibliographic metadata is withheld during double-blind review. The final citation will be added after acceptance.</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container is-max-desktop"><div class="content has-text-centered">
+        <p><strong>DPed-VLN</strong> · Anonymous project page for double-blind review.</p>
+        <p class="is-size-7">This page uses the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page, under CC BY-SA 4.0.</p>
+      </div></div>
+    </footer>
+  </main>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</body>
+</html>
