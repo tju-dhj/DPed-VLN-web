@@ -765,3 +765,11 @@ a:focus {
 .figure-gallery img { display:block; width:100%; height:auto; max-height:520px; object-fit:contain; }
 .figure-gallery figcaption { margin-top:.7rem; text-align:center; color:#667085; font-size:.9rem; }
 @media (max-width:768px) { .figure-gallery { grid-template-columns:1fr; } .result-table { font-size:.78rem; } }
+/* Use complete publication-style grid rules for all result tables. */
+.result-table-wrap { border:1px solid #aeb7c4; border-radius:0; overflow-x:auto; background:#fff; }
+.result-table { border:1px solid #7f8a99; border-collapse:collapse; }
+.result-table th, .result-table td { border:1px solid #aeb7c4; }
+.result-table thead th { border-bottom:2px solid #667085; }
+.result-table tbody tr:last-child td { border-bottom:1px solid #aeb7c4; }
+.figure-gallery figure { padding:.5rem; border:1px solid #d3d9e2; border-radius:8px; }
+.figure-gallery img { max-height:none; width:100%; height:auto; object-fit:contain; }

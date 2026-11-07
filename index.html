@@ -100,6 +100,14 @@
 
     <section class="section hero is-light">
       <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Benchmark comparison</h2>
+        <div class="result-table-wrap"><table class="result-table"><thead><tr><th>Attribute</th><th>R2R-CE</th><th>HA-VLN</th><th>DPed-VLN</th></tr></thead><tbody>
+          <tr><td>Dataset scale (episodes)</td><td>14,732</td><td>16,844</td><td class="best">33,093</td></tr><tr><td>Instruction representation</td><td>Flat narrative</td><td>Flat human-augmented</td><td class="best">Paired global / prior-augmented</td></tr><tr><td>Simulation platform</td><td>Habitat 1.0</td><td>Habitat 2.0 / Matterport3D</td><td class="best">Habitat 3.0</td></tr><tr><td>Human modeling</td><td>None</td><td>Mesh-based animation</td><td class="best">ORCA-controlled humanoids</td></tr><tr><td>Crowd density (agents / scene)</td><td>0</td><td>1–3</td><td class="best">1–6</td></tr><tr><td>Evaluation metrics</td><td>SR, SPL</td><td>SR, NE, TCR, CR</td><td class="best">SR, SPL, STL, HCR, PSC</td></tr><tr><td>Primary focus</td><td>Static navigation</td><td>Human-aware navigation</td><td class="best">Dynamic pedestrian indoor VLN</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Two language conditions</h2>
         <div class="columns is-variable is-5 mt-4">
           <div class="column"><div class="method-card"><span class="num">LEVEL 1</span><h3 class="title is-4 mt-2">Global instructions</h3><p>Route and destination guidance grounded in the static scene, without pedestrian-specific priors.</p></div></div>
@@ -116,17 +124,6 @@
         <figure class="paper-figure"><img src="static/images/figure_Baseline.png" alt="DPet reference framework" loading="lazy"><figcaption>Reference architecture for pedestrian-aware vision-and-language navigation.</figcaption></figure>
       </div>
     </section>
-
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Results and qualitative evidence</h2>
-        <div class="columns is-variable is-5 mt-4">
-          <div class="column"><figure class="paper-figure"><img src="static/images/example_visualize.png" alt="Qualitative navigation examples" loading="lazy"><figcaption>Qualitative navigation examples under dynamic pedestrian interactions.</figcaption></figure></div>
-          <div class="column is-flex is-align-items-center"><div class="content"><h3 class="title is-4">Progress and safety together</h3><p>We report success, path efficiency, completion time, collision behavior, and personal-space compliance side by side to expose the trade-offs hidden by goal-reaching metrics alone.</p><div class="tags"><span class="tag is-link is-light">SR</span><span class="tag is-link is-light">SPL</span><span class="tag is-link is-light">STL</span><span class="tag is-link is-light">PSC</span><span class="tag is-link is-light">HCR</span></div></div></div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="results">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Experimental results</h2>
@@ -145,6 +142,15 @@
           <tr><td rowspan="6">L2</td><td>NaVILA-ZS</td><td>23.45</td><td>22.86</td><td>23.35</td><td>90.37</td><td>43.32</td></tr><tr><td>NaVILA-FT</td><td>23.88</td><td>22.53</td><td>23.18</td><td>90.56</td><td>41.69</td></tr><tr><td>StreamVLN-ZS</td><td>15.96</td><td>14.67</td><td>15.07</td><td>93.13</td><td>41.59</td></tr><tr><td>StreamVLN-FT</td><td>17.26</td><td>13.56</td><td>14.98</td><td class="best">94.15</td><td class="best">26.06</td></tr><tr><td>DPet-IL</td><td>22.37</td><td>18.45</td><td>20.42</td><td>94.08</td><td>30.62</td></tr><tr><td>DPet-RL</td><td class="best">38.55</td><td class="best">36.35</td><td class="best">37.97</td><td>92.88</td><td>36.70</td></tr>
         </tbody></table></div>
 
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Qualitative navigation</h2>
+        <div class="columns is-variable is-5 mt-4">
+          <div class="column"><figure class="paper-figure"><img src="static/images/example_visualize.png" alt="Qualitative navigation examples" loading="lazy"><figcaption>Qualitative navigation examples under dynamic pedestrian interactions.</figcaption></figure></div>
+          <div class="column is-flex is-align-items-center"><div class="content"><h3 class="title is-4">Progress and safety together</h3><p>We report success, path efficiency, completion time, collision behavior, and personal-space compliance side by side to expose the trade-offs hidden by goal-reaching metrics alone.</p><div class="tags"><span class="tag is-link is-light">SR</span><span class="tag is-link is-light">SPL</span><span class="tag is-link is-light">STL</span><span class="tag is-link is-light">PSC</span><span class="tag is-link is-light">HCR</span></div></div></div>
+        </div>
+      </div>
+    </section>
         <h3 class="title is-4">Pedestrian dynamics ablation</h3>
         <div class="result-table-wrap"><table class="result-table"><thead><tr><th>Method</th><th>SR · SPed</th><th>SR · DPed</th><th>ΔSR</th><th>HCR · SPed</th><th>HCR · DPed</th><th>ΔHCR</th></tr></thead><tbody>
           <tr><td>NaVILA</td><td>23.02</td><td>21.61</td><td>−1.41</td><td>2.11</td><td>40.17</td><td>+38.06</td></tr><tr><td>StreamVLN</td><td>15.17</td><td>15.74</td><td>+0.57</td><td>4.22</td><td>37.24</td><td>+33.02</td></tr><tr><td>DPet-IL</td><td>35.82</td><td>22.69</td><td>−13.13</td><td>1.45</td><td>28.23</td><td>+26.78</td></tr><tr><td>DPet-RL</td><td class="best">39.44</td><td class="best">37.13</td><td>−2.31</td><td class="best">1.02</td><td>42.45</td><td>+41.43</td></tr>
@@ -190,5 +196,10 @@
   <script defer src="static/js/index.js"></script>
 </body>
 </html>
+
+
+
+
+
 
 
