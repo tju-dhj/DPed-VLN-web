@@ -163,22 +163,60 @@
     </section>
 
     <section class="section hero is-light" id="supplementary-figures">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Supplementary analysis</h2>
-        <p class="has-text-centered mb-5">Additional dataset, instruction, sensor, and action-distribution figures from the supplementary material.</p>
-        <div class="figure-gallery">
-          <figure><img src="static/images/figure_3_2.png" alt="Paired instruction generation" loading="lazy"><figcaption>Paired instruction generation</figcaption></figure>
-          <figure><img src="static/images/train_action_distribution_improve.png" alt="Expert action distribution" loading="lazy"><figcaption>Expert action distribution</figcaption></figure>
-          <figure><img src="static/images/instruction_wordclouds_comparison.png" alt="Instruction word clouds" loading="lazy"><figcaption>Instruction word clouds</figcaption></figure>
-          <figure><img src="static/images/06_pedestrian_keyword_frequency.png" alt="Pedestrian keyword frequency" loading="lazy"><figcaption>Pedestrian-related keyword frequency</figcaption></figure>
-          <figure><img src="static/images/Word_Count_Distribution.png" alt="Instruction word count distribution" loading="lazy"><figcaption>Instruction word-count distributions</figcaption></figure>
-          <figure><img src="static/images/experiments_2_lidar.png" alt="Lidar experiment" loading="lazy"><figcaption>Additional lidar experiment</figcaption></figure>
-          <figure><img src="static/images/compared_with_HAVLN2.png" alt="Comparison with HA-VLN 2.0" loading="lazy"><figcaption>Pedestrian representation comparison</figcaption></figure>
-          <figure><img src="static/images/Cross-Validation-Matrix.png" alt="Cross-validation matrix" loading="lazy"><figcaption>Cross-validation matrix</figcaption></figure>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Supplementary analysis</h2>
+    <p class="has-text-centered mb-5">The supplementary material expands the benchmark construction, instruction semantics, sensing setup, and action statistics used by the main experiments.</p>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Instruction generation</h3>
+      <p>The paired-instruction pipeline starts from the same expert episode. Level 1 uses static scene context and route-level observations for goal-oriented guidance. Level 2 receives the additional dynamic-pedestrian context extracted from the recorded trajectory, then produces prior-augmented language. Both conditions refer to the same episode, so their comparison isolates the effect of pedestrian-related guidance.</p>
+      <figure><img src="static/images/figure_3_2.png" alt="Paired instruction generation" loading="lazy"><figcaption>Paired instruction generation from multi-sensor observations and expert trajectories.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Expert action distribution</h3>
+      <p>The expert trajectories contain mostly forward actions, with left and right turns forming the next largest groups. This distribution explains why the imitation objective uses inflection weighting: turns and avoidance transitions carry more behavioral information than repeated straight motion.</p>
+      <figure><img src="static/images/train_action_distribution_improve.png" alt="Expert action distribution" loading="lazy"><figcaption>Action distribution in the expert trajectories.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Instruction semantics</h3>
+      <p>The word clouds show that Level 1 emphasizes static spatial expressions such as rooms, hallways, and directions. Level 2 retains the route language while adding terms related to people, avoidance, and spatial interaction, reflecting the additional pedestrian priors.</p>
+      <figure><img src="static/images/instruction_wordclouds_comparison.png" alt="Instruction word clouds" loading="lazy"><figcaption>Stopword-filtered word clouds for the two instruction levels.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Pedestrian-related vocabulary</h3>
+      <p>The keyword-frequency analysis quantifies the semantic difference between the two corpora. Pedestrian and avoidance terms occur more frequently in Level 2, consistent with the dynamic context supplied during its generation.</p>
+      <figure><img src="static/images/06_pedestrian_keyword_frequency.png" alt="Pedestrian keyword frequency" loading="lazy"><figcaption>Frequency comparison of pedestrian-related keywords.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Instruction length distributions</h3>
+      <p>Word-count distributions are reported for both train and scene-held-out validation episodes. The split distributions remain closely aligned across the two levels, indicating that the paired instruction protocol changes semantic content without introducing a large length shift.</p>
+      <figure><img src="static/images/Word_Count_Distribution.png" alt="Instruction word count distribution" loading="lazy"><figcaption>Instruction word-count distributions across train and val-unseen.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Additional sensing experiment</h3>
+      <p>This additional experiment visualizes the sensing configuration used in the navigation setup and provides a compact view of the geometric information available to the policy beyond the RGB stream.</p>
+      <figure><img src="static/images/experiments_2_lidar.png" alt="Additional lidar experiment" loading="lazy"><figcaption>Additional LiDAR-based sensing analysis.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Pedestrian representation</h3>
+      <p>The comparison contrasts textured, articulated pedestrians controlled by ORCA in DPed-VLN with the monochrome human meshes used by HA-VLN 2.0. The richer appearance and articulated motion make the visual observation closer to a human-populated indoor environment.</p>
+      <figure><img src="static/images/compared_with_HAVLN2.png" alt="Comparison with HA-VLN 2.0" loading="lazy"><figcaption>Pedestrian representation comparison.</figcaption></figure>
+    </article>
+
+    <article class="supp-block">
+      <h3 class="title is-4">Cross-validation view</h3>
+      <p>The cross-validation matrix summarizes how the paired instruction conditions and training paradigms interact. It should be read together with the detailed tables above: the diagonal and off-diagonal entries distinguish matched evaluation from transferring a policy across instruction levels.</p>
+      <figure><img src="static/images/Cross-Validation-Matrix.png" alt="Cross-validation matrix" loading="lazy"><figcaption>Cross-validation matrix for paired instruction conditions.</figcaption></figure>
+    </article>
+  </div>
+</section>
+<section class="section" id="BibTeX">
       <div class="container is-max-desktop content citation-box">
         <h2 class="title is-3">Citation</h2>
         <div class="status-box"><i class="fas fa-lock mr-2"></i>Bibliographic metadata is withheld during double-blind review. The final citation will be added after acceptance.</div>
@@ -196,6 +234,7 @@
   <script defer src="static/js/index.js"></script>
 </body>
 </html>
+
 
 
 

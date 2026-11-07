@@ -779,3 +779,8 @@ a:focus {
 .stacked-result-tables { display:flex; flex-direction:column; gap:1.25rem; }
 .stacked-result-tables > div { width:100%; }
 .stacked-result-tables .result-table { min-width:0; }
+.supp-block { margin:2.5rem 0 3.5rem; }
+.supp-block p { max-width:900px; margin:0 auto 1.25rem; line-height:1.75; color:#475467; }
+.supp-block figure { margin:0; padding:0; text-align:center; }
+.supp-block figure img { display:block; width:100%; height:auto; max-height:none; object-fit:contain; margin:0 auto; }
+.supp-block figcaption { margin-top:.65rem; color:#667085; font-size:.9rem; }
