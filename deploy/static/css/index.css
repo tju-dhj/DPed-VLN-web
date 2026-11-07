@@ -776,3 +776,6 @@ a:focus {
 /* Keep each figure card at its intrinsic content height; do not stretch short figures to match a neighboring tall figure. */
 .figure-gallery { align-items:start; }
 .figure-gallery figure { align-self:start; height:auto; }
+.stacked-result-tables { display:flex; flex-direction:column; gap:1.25rem; }
+.stacked-result-tables > div { width:100%; }
+.stacked-result-tables .result-table { min-width:0; }
