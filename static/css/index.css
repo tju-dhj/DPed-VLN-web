@@ -751,3 +751,17 @@ a:focus {
 
 
 
+
+/* Additional result-table and figure-gallery styling for the anonymous paper page. */
+.result-table-wrap { overflow-x:auto; margin:1.25rem 0 2rem; border:1px solid #e7eaf0; border-radius:12px; background:#fff; }
+.result-table { width:100%; min-width:760px; border-collapse:collapse; font-size:.86rem; }
+.result-table th, .result-table td { padding:.62rem .58rem; border-bottom:1px solid #edf0f5; text-align:center; white-space:nowrap; }
+.result-table th { background:#f5f8ff; color:#1d4ed8; font-weight:700; }
+.result-table td:first-child, .result-table th:first-child { text-align:left; position:sticky; left:0; background:inherit; }
+.result-table tr:last-child td { border-bottom:0; }
+.result-table .best { font-weight:800; color:#1d4ed8; }
+.figure-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.35rem; }
+.figure-gallery figure { margin:0; padding:1rem; border:1px solid #e7eaf0; border-radius:14px; background:#fff; }
+.figure-gallery img { display:block; width:100%; height:auto; max-height:520px; object-fit:contain; }
+.figure-gallery figcaption { margin-top:.7rem; text-align:center; color:#667085; font-size:.9rem; }
+@media (max-width:768px) { .figure-gallery { grid-template-columns:1fr; } .result-table { font-size:.78rem; } }

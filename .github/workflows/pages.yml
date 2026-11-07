@@ -23,7 +23,8 @@ jobs:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: deploy
       - id: deployment
         uses: actions/deploy-pages@v4
+
 
