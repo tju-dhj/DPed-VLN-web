@@ -106,6 +106,13 @@
         </tbody></table></div>
       </div>
     </section>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Pedestrian representation</h2>
+        <p class="has-text-centered mb-4">The benchmark renders articulated, textured humanoids controlled by ORCA, while HA-VLN 2.0 uses monochrome human meshes. The richer appearance and articulated motion reduce visual domain shift for pretrained vision-language encoders and make pedestrian interaction explicit in the dataset analysis.</p>
+        <figure class="paper-figure"><img src="static/images/compared_with_HAVLN2.png" alt="Qualitative comparison of pedestrian representations in DPed-VLN and HA-VLN 2.0" loading="lazy"><figcaption>Figure 4. Qualitative comparison of pedestrian representations.</figcaption></figure>
+      </div>
+    </section>
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Two language conditions</h2>
@@ -201,15 +208,7 @@
       <h3 class="title is-4">Additional sensing experiment</h3>
       <p>This additional experiment visualizes the sensing configuration used in the navigation setup and provides a compact view of the geometric information available to the policy beyond the RGB stream.</p>
       <figure><img src="static/images/experiments_2_lidar.png" alt="Additional lidar experiment" loading="lazy"><figcaption>Additional LiDAR-based sensing analysis.</figcaption></figure>
-    </article>
-
-    <article class="supp-block">
-      <h3 class="title is-4">Pedestrian representation</h3>
-      <p>The comparison contrasts textured, articulated pedestrians controlled by ORCA in DPed-VLN with the monochrome human meshes used by HA-VLN 2.0. The richer appearance and articulated motion make the visual observation closer to a human-populated indoor environment.</p>
-      <figure><img src="static/images/compared_with_HAVLN2.png" alt="Comparison with HA-VLN 2.0" loading="lazy"><figcaption>Pedestrian representation comparison.</figcaption></figure>
-    </article>
-
-    <article class="supp-block">
+    </article><article class="supp-block">
       <h3 class="title is-4">Cross-validation view</h3>
       <p>The cross-validation matrix summarizes how the paired instruction conditions and training paradigms interact. It should be read together with the detailed tables above: the diagonal and off-diagonal entries distinguish matched evaluation from transferring a policy across instruction levels.</p>
       <figure><img src="static/images/Cross-Validation-Matrix.png" alt="Cross-validation matrix" loading="lazy"><figcaption>Cross-validation matrix for paired instruction conditions.</figcaption></figure>
@@ -234,6 +233,7 @@
   <script defer src="static/js/index.js"></script>
 </body>
 </html>
+
 
 
 
